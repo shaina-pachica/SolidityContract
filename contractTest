@@ -1,0 +1,44 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
+
+contract Test {
+    int temperature;
+    uint quantity;  
+    bool flag;
+    string name;
+
+    // take the values and assigns them to state variables
+    function setTemperature(int _number) public {
+        temperature = _number;
+    }
+
+    function setQuantity(uint _number) public {
+        quantity = _number;
+    }
+
+    function setCondition(bool _flag) public {
+        flag = _flag;
+    }
+
+    function setName(string memory _str) public {
+        name = _str;
+    }
+
+
+    // return the values of the state variables
+    function getTemperature() public view returns (int) {
+        return temperature;
+    }
+
+    function getQuantity() public view returns (uint) {
+        return quantity;
+    }
+
+    function getBool() public view returns (bool) {
+        return flag;
+    }
+
+    function getName() public view returns (string memory) {
+        return name;
+    }
+}
